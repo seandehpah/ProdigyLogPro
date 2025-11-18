@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Prodigy Logistics & Procurement Services Ltd</title>
+    <link rel="icon" type="image/png" href="/images/logoicon.png">    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        prodigyBlue: '#1E3A8A',
+                        prodigyRed: '#DC2626',
+                        prodigyOrange: '#F59E0B',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+    <custom-navigation></custom-navigation>
+
+    <main class="pt-24">
+        <section class="container mx-auto px-6 py-12">
+            <h1 class="text-4xl font-bold text-center mb-4 text-prodigyBlue">Our Comprehensive Services</h1>
+            <p class="text-xl text-center mb-12 max-w-3xl mx-auto text-gray-600">Tailored solutions designed to streamline your supply chain from procurement to final delivery</p>
+            
+            <!-- Procurement Services CARD (Made Clickable) -->
+            <a href="procurement.html" class="block mb-20 p-6 transition duration-300 rounded-xl hover:bg-gray-100 hover:shadow-2xl">
+                <div id="procurement" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6 text-prodigyBlue">Procurement Solutions</h2>
+                        <p class="text-lg mb-6 text-gray-700">Our procurement services ensure you get quality materials at competitive prices with reliable suppliers.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-prodigyRed w-5 h-5 mt-1"></i> <span>End-to-end sourcing solutions</span></li>
+                            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-prodigyRed w-5 h-5 mt-1"></i> <span>Vendor selection and management</span></li>
+                            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-prodigyRed w-5 h-5 mt-1"></i> <span>Cost optimization strategies</span></li>
+                            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-prodigyRed w-5 h-5 mt-1"></i> <span>Quality assurance processes</span></li>
+                        </ul>
+                        <!-- Removed 'Learn More' button to prevent nested links. The whole card is the link. -->
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/smartprocurement.png" 
+                             alt="Procurement Services" 
+                             class="w-full h-full object-cover"
+                             onerror="this.onerror=null;this.src='https://placehold.co/640x360/1E3A8A/ffffff?text=Procurement+Image+Placeholder'">
+                    </div>
+                </div>
+            </a>
+
+            <!-- Logistics Services CARD (Made Clickable) -->
+            <a href="logistics.html" class="block mb-20 p-6 transition duration-300 rounded-xl hover:bg-gray-100 hover:shadow-2xl">
+                <div id="logistics" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="order-1 md:order-2">
+                        <h2 class="text-3xl font-bold mb-6 text-prodigyBlue">Logistics & Distribution</h2>
+                        <p class="text-lg mb-6 text-gray-700">Efficient transportation and warehousing solutions that keep your business moving.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-prodigyRed w-5 h-5 mt-1"></i> <span>Nationwide delivery network</span></li>
+                            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-prodigyRed w-5 h-5 mt-1"></i> <span>Warehousing and inventory management</span></li>
+                            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-prodigyRed w-5 h-5 mt-1"></i> <span>Last-mile delivery solutions</span></li>
+                            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-prodigyRed w-5 h-5 mt-1"></i> <span>Real-time tracking systems</span></li>
+                        </ul>
+                        <!-- Removed 'Learn More' button to prevent nested links. The whole card is the link. -->
+                    </div>
+                    <div class="order-2 md:order-1 rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/haulage_network.jpg" 
+                             alt="Logistics Services" 
+                             class="w-full h-full object-cover"
+                             onerror="this.onerror=null;this.src='https://placehold.co/640x360/DC2626/ffffff?text=Logistics+Image+Placeholder'">
+                    </div>
+                </div>
+            </a>
+
+            <!-- Custom Projects CARD (Made Clickable) -->
+            <a href="custom.html" class="block p-6 transition duration-300 rounded-xl hover:bg-gray-100 hover:shadow-2xl">
+                <div id="custom-projects" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-6 text-prodigyBlue">Custom Supply Chain Projects</h2>
+                        <p class="text-lg mb-6 text-gray-700">Specialized solutions for complex requirements across multiple industries.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-prodigyRed w-5 h-5 mt-1"></i> <span>Project-specific procurement</span></li>
+                            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-prodigyRed w-5 h-5 mt-1"></i> <span>Bulk material handling</span></li>
+                            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-prodigyRed w-5 h-5 mt-1"></i> <span>International sourcing</span></li>
+                            <li class="flex items-start"><i data-feather="check-circle" class="mr-2 text-prodigyRed w-5 h-5 mt-1"></i> <span>Specialized equipment logistics</span></li>
+                        </ul>
+                        <!-- Removed 'Learn More' button to prevent nested links. The whole card is the link. -->
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/customsupply.png" 
+                             alt="Custom Projects" 
+                             class="w-full h-full object-cover"
+                             onerror="this.onerror=null;this.src='https://placehold.co/640x360/F59E0B/ffffff?text=Custom+Supply+Image+Placeholder'">
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <!-- CTA Section (Color Changed and Button Contrast Improved) -->
+        <section class="py-16 bg-prodigyRed">
+            <div class="container mx-auto px-6 text-center animate-on-scroll">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Need a custom solution?</h2>
+                <p class="text-xl text-white mb-8">Our team can design a supply chain solution tailored to your specific requirements.</p>
+                <a href="contact.html" class="bg-white hover:bg-prodigyBlue hover:text-white text-prodigyRed px-10 py-4 rounded-full text-lg font-bold uppercase tracking-wider btn-hover-effect shadow-2xl">
+                    Free Consultation
+                </a>
+            </div>
+        </section>
+      
+    </main>
+
+    <custom-footer></custom-footer>
+    <script src="components/navigation.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>

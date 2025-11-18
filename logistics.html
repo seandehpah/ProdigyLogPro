@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics & Delivery | Prodigy Logistics</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        prodigyBlue: '#1E3A8A',
+                        prodigyRed: '#DC2626',
+                        prodigyOrange: '#F59E0B',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+    <custom-navigation data-current-page="services-logistics"></custom-navigation>
+
+    <main class="pt-24">
+      
+<!-- Hero Section -->
+<section class="relative py-20 overflow-hidden">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+        <!-- Text Content (Now on the Left) -->
+        <div class="text-prodigyBlue space-y-6">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">Haulage & Delivery Across Nigeria</h1>
+            <p class="text-xl font-light mb-4 text-prodigyOrange text-justify">
+                Seamless, nationwide transportation solutions. We connect your business to every corner of Nigeria with unparalleled reliability.
+            </p>
+            <p class="text-lg mb-4 leading-relaxed text-justify">
+                <strong>Prodigy Logistics & Procurement Services</strong>, ensures efficient nationwide movement of goods through an integrated haulage and delivery system. Whether heavy industrial equipment, bulk materials, or time-sensitive deliveries, we use a vetted carrier network and modern fleet management. With expertise in Nigeria’s terrains, we provide optimized routes and real-time tracking to deliver products safely and on time.
+            </p>
+            <p class="text-lg font-semibold text-prodigyBlue leading-relaxed">
+                Require logistical support?
+            </p>
+            <a href="contact.html" class="bg-prodigyRed hover:bg-prodigyBlue text-white px-8 py-3 rounded-full font-semibold inline-block mt-4 shadow-lg">
+                Contact Us Now
+            </a>
+        </div>
+
+        <!-- Image Placeholder (Now on the Right) -->
+        <div class="rounded-xl overflow-hidden shadow-2xl border-4 border-prodigyRed h-full w-full">
+            <img src="images/haulage_network.jpg" alt="National Haulage Network in Nigeria" 
+                 class="w-full h-full object-cover object-center"
+                 onerror="this.onerror=null;this.src='https://placehold.co/600x400/1E3A8A/ffffff?text=Haulage+Network+Image'">
+        </div>
+
+    </div>
+</section>
+
+        <!-- Nationwide Reach & Vehicle Fleet -->
+        <section class="container mx-auto px-6 py-16">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl font-bold text-prodigyRed mb-4">Your Cargo, Our Fleet, Nigeria-Wide</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We offer diverse vehicle types to cater to different logistical needs, ensuring we can reach anywhere in Nigeria safely and on schedule.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- Vehicle Type 1: Heavy Duty -->
+                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-prodigyBlue animate-on-scroll">
+                    <div class="h-52 overflow-hidden rounded-lg mb-4">
+                        <img src="images/truck_heavy.jpg" alt="Heavy Haulage Truck" class="w-full h-full object-cover transform hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='https://placehold.co/400x300/1E3A8A/ffffff?text=Heavy+Truck'">
+                    </div>
+                    <h3 class="text-2xl font-bold text-prodigyBlue mb-2">Heavy Haulage</h3>
+                    <p class="text-gray-700">For bulk cargo, industrial machinery, & large-scale construction materials. We provide flatbeds & specialized trailers.</p>
+                </div>
+
+                <!-- Vehicle Type 2: Standard Cargo -->
+                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-prodigyRed animate-on-scroll">
+                    <div class="h-50 overflow-hidden rounded-lg mb-4">
+                        <img src="images/truck_standard.jpg" alt="Standard Cargo Truck" class="w-full h-full object-cover transform hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='https://placehold.co/400x300/DC2626/ffffff?text=Standard+Truck'">
+                    </div>
+                    <h3 class="text-2xl font-bold text-prodigyRed mb-2">Standard Cargo & Box Trucks</h3>
+                    <p class="text-gray-700">Ideal for general merchandise, FMCG distribution, and efficient movement between cities on major routes.</p>
+                </div>
+
+                <!-- Vehicle Type 3: Last-Mile Delivery -->
+                <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-prodigyBlue animate-on-scroll">
+                    <div class="h-50 overflow-hidden rounded-lg mb-4">
+                        <img src="images/truck_light.jpg" alt="Light Duty Van/Truck" class="w-full h-full object-cover transform hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='https://placehold.co/400x300/1E3A8A/ffffff?text=Delivery+Van'">
+                    </div>
+                    <h3 class="text-2xl font-bold text-prodigyBlue mb-2">Light & Last-Mile Delivery</h3>
+                    <p class="text-gray-700">Vans and smaller trucks perfect for urban environments and final-destination deliveries in complex areas.</p>
+                </div>
+            </div>
+
+            <!-- Value Proposition (Warehousing Mention) -->
+            <div class="bg-prodigyRed/10 p-10 rounded-xl animate-on-scroll">
+                <h3 class="text-3xl font-bold text-prodigyBlue mb-4">Beyond Haulage: Value-Added Services</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <ul class="space-y-3 text-lg text-gray-700">
+                            <li class="flex items-start"><i data-feather="map" class="mr-3 text-prodigyRed w-6 h-6 flex-shrink-0 mt-1"></i> Route Optimization: Planning efficient, safe, and reliable routes across challenging terrain.</li>
+                            <li class="flex items-start"><i data-feather="box" class="mr-3 text-prodigyRed w-6 h-6 flex-shrink-0 mt-1"></i> Cross-Docking & Warehousing: Utilizing our facilities for consolidation, sorting, and seamless transfer of goods.</li>
+                            <li class="flex items-start"><i data-feather="check-square" class="mr-3 text-prodigyRed w-6 h-6 flex-shrink-0 mt-1"></i> Delivery Documentation: Professional handling of all necessary paperwork for smooth transit.</li>
+                        </ul>
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-lg">
+                        <img src="images/warehouse_ops.jpg" alt="Warehouse Operations" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/500x300/DC2626/ffffff?text=Warehouse+Operations'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      
+        <section class="py-16 bg-prodigyRed">
+            <div class="container mx-auto px-6 text-center animate-on-scroll">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Optimize Your Deliveries?</h2>
+                <p class="text-xl text-white mb-8">Let us handle your transportation complexities so you can focus on your core business. Contact our haulage specialists professionally today</p>
+                <a href="contact.html" class="bg-white hover:bg-prodigyBlue hover:text-white text-prodigyRed px-10 py-4 rounded-full text-lg font-bold uppercase tracking-wider btn-hover-effect shadow-2xl">
+                    Free Consultation
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+    
+    <script src="components/navigation.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Initialize feather icons for content outside the custom components
+        feather.replace();
+    </script>
+</body>
+</html>

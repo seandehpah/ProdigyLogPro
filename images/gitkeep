@@ -1,0 +1,10 @@
+```
+
+This creates an empty images folder with a .gitkeep file to ensure the folder is tracked in Git (if the project uses Git). 
+
+The folder can now be used to store any image assets needed for the website. You can add images like:
+- logo.png
+- hero-banner.jpg
+- team-photos/
+- service-icons/
+- etc.

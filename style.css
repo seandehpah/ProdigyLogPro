@@ -1,0 +1,140 @@
+/* ==========================
+   Custom Navigation Styles
+   ========================== */
+
+/* General host and font */
+:host {
+    display: block;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation container */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+/* Logo */
+.logo img {
+    height: 50px;
+}
+
+/* Desktop menu */
+.menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+@media (min-width: 769px) {
+    .menu {
+        margin-right: 80px; /* keeps desktop spacing, mobile unaffected */
+    }
+}
+
+/* Menu items */
+.menu-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #1E3A8A;
+    font-weight: bold;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s;
+}
+
+.menu-item a:hover {
+    color: #DC2626;
+    border-bottom: 2px solid #DC2626;
+}
+
+.menu-item.active a {
+    color: #DC2626;
+    border-bottom: 2px solid #DC2626;
+}
+
+/* Dropdown */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    flex-direction: column;
+    min-width: 220px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 250;
+}
+
+.dropdown a {
+    padding: 0.5rem 1rem;
+    color: #1E3A8A;
+    font-weight: bold;
+}
+
+.dropdown a:hover {
+    background: #DC2626;
+    color: white;
+}
+
+.menu-item.show .dropdown {
+    display: flex;
+}
+
+/* Hamburger icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 300;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: #1E3A8A;
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: fixed;       /* fixed so it appears over page */
+        top: 64px;             /* below nav */
+        right: 0;
+        width: 220px;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        z-index: 250;
+        max-height: calc(100vh - 64px);
+        overflow-y: auto;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .menu-item .dropdown {
+        position: static;
+        box-shadow: none;
+    }
+
+    .hamburger {
+        display: flex;  /* shows hamburger on mobile */
+    }
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodigy Logistics & Procurement Services Ltd | Lagos, Nigeria.</title>
+    <link rel="icon" type="image/png" href="/images/logoicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        prodigyBlue: '#1E3A8A',
+                        prodigyRed: '#DC2626',
+                        prodigyOrange: '#F59E0B',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+
+    <custom-navigation data-current-page="home"></custom-navigation>
+
+    <main>
+        
+        <!-- HERO SECTION: Updated with images/business.png and overlay -->
+        <section class="relative h-[70vh] flex items-center justify-center bg-cover bg-center" 
+                 style="background-image: url('images/business.png');">
+            <!-- This div provides the 50% opaque (50% transparent) blue overlay -->
+            <div class="absolute inset-0 bg-prodigyBlue opacity-50"></div>
+            
+            <div class="container mx-auto py-6 px-6 z-10 text-center hero-content">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
+                    Precision Logistics, Powerful Procurement
+                </h1>
+                <p class="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
+                    Simplifying sourcing and nationwide delivery with tailored solutions for B2B clients in Nigeria.
+                </p>
+                <a href="contact.html" class="bg-prodigyRed hover:bg-prodigyOrange text-white px-10 py-4 rounded-full text-lg font-bold uppercase tracking-wider btn-hover-effect shadow-xl">
+                    Free Consultation
+                </a>
+            </div>
+        </section>
+
+        
+        <section id="services" class="py-16 md:py-24">
+            <div class="container mx-auto px-6 text-center animate-on-scroll">
+                <h2 class="text-4xl font-extrabold text-prodigyBlue mb-4">Our Core Expertise</h2>
+                <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+                    We offer tailored solutions that combine smart procurement, swift logistics, and comprehensive project management.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service 1: Procurement -->
+                    <a href="procurement.html" class="group service-card p-8 bg-white rounded-xl shadow-lg border-t-4 border-prodigyBlue hover:shadow-2xl hover:border-prodigyBlue transition duration-300">
+                        <!-- Image placeholder updated -->
+                        <img src="images/procurement-service.png" 
+                             alt="Procurement Solutions" 
+                             class="rounded-lg mb-6 w-full h-45 object-cover group-hover:scale-105 transition-transform duration-300"
+                             onerror="this.onerror=null;this.src='https://placehold.co/400x250/1E3A8A/ffffff?text=Procurement+Image'">
+                        <div class="p-4 bg-prodigyRed text-white rounded-full inline-block mb-4">
+                            <i data-feather="shopping-cart" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-prodigyBlue">Procurement Services</h3>
+                        <p class="text-gray-600">Vendor sourcing, price negotiation, bulk purchasing, and compliant local & international sourcing.</p>
+                        <span class="mt-4 inline-block font-semibold text-prodigyRed hover:text-prodigyBlue transition">Learn More &rarr;</span>
+                    </a>
+                    
+                    <!-- Service 2: Logistics -->
+                    <a href="logistics.html" class="group service-card p-8 bg-white rounded-xl shadow-lg border-t-4 border-prodigyRed hover:shadow-2xl hover:border-prodigyBlue transition duration-300">
+                        <!-- Image placeholder updated -->
+                        <img src="images/logistics-service.png" 
+                             alt="Logistics & Delivery" 
+                             class="rounded-lg mb-6 w-full h-45 object-cover group-hover:scale-105 transition-transform duration-300"
+                             onerror="this.onerror=null;this.src='https://placehold.co/400x250/DC2626/ffffff?text=Logistics+Image'">
+                        <div class="p-4 bg-prodigyRed text-white rounded-full inline-block mb-4">
+                            <i data-feather="truck" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-prodigyBlue">Logistics & Delivery</h3>
+                        <p class="text-gray-600">Nationwide distribution, haulage for heavy goods, scheduled delivery, and reliable last-mile services.</p>
+                        <span class="mt-4 inline-block font-semibold text-prodigyRed hover:text-prodigyBlue transition">Learn More &rarr;</span>
+                    </a>
+                    
+                    <!-- Service 3: Custom Supply Chain -->
+                    <a href="custom.html" class="group service-card p-8 bg-white rounded-xl shadow-lg border-t-4 border-prodigyBlue hover:shadow-2xl hover:border-prodigyBlue transition duration-300">
+                        <!-- Image placeholder updated -->
+                        <img src="images/custom-service.png" 
+                             alt="Custom Supply Chain" 
+                             class="rounded-lg mb-6 w-full h-45 object-cover group-hover:scale-105 transition-transform duration-300"
+                             onerror="this.onerror=null;this.src='https://placehold.co/400x250/F59E0B/ffffff?text=Custom+Supply+Image'">
+                        <div class="p-4 bg-prodigyRed text-white rounded-full inline-block mb-4">
+                            <i data-feather="box" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-prodigyBlue">Custom Supply Chain</h3>
+                        <p class="text-gray-600">Project-based logistics, warehouse coordination, and specialized handling for fragile items.</p>
+                        <span class="mt-4 inline-block font-semibold text-prodigyRed hover:text-prodigyBlue transition">Learn More &rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="bg-prodigyBlue text-white py-16 md:py-24">
+            <div class="container mx-auto px-6 text-center animate-on-scroll">
+                <h2 class="text-4xl font-extrabold mb-4">Your Trusted Partner in Growth</h2>
+                <p class="text-xl mb-8 max-w-3xl mx-auto">
+                    We aren't just a service provider; we're an extension of your business. We empower your operations with efficiency, transparency, and unwavering dedication.
+                </p>
+                <a href="about.html" class="bg-white hover:bg-prodigyOrange hover:text-white text-prodigyBlue px-8 py-3 rounded-full text-lg font-bold uppercase tracking-wider btn-hover-effect shadow-xl">
+                    Our Story & Values
+                </a>
+            </div>
+        </section>
+
+        
+<!-- CLIENTS SECTION: Square containers, single row -->
+<section id="clients" class="py-16 md:py-24 bg-gray-100">
+    <div class="container mx-auto px-6 text-center animate-on-scroll">
+        <h2 class="text-4xl font-extrabold text-prodigyBlue mb-4">Our Valued Clients</h2>
+        <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+            We are proud to partner with a diverse range of clients across various sectors.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-6">
+            
+            <div class="bg-white p-4 rounded-xl shadow-md flex flex-col items-center justify-center w-32 h-32 hover:shadow-lg transition duration-300">
+                <img src="images/client-academy-press.png" alt="Academy Press Logo" class="h-30 w-30 object-contain mb-2" onerror="this.onerror=null;this.src='https://placehold.co/64x64/f3f4f6/6b7280?text=Logo'">
+            </div>
+
+            <div class="bg-white p-4 rounded-xl shadow-md flex flex-col items-center justify-center w-32 h-32 hover:shadow-lg transition duration-300">
+                <img src="images/client-tregong.png" alt="Tregong Nigeria Limited Logo" class="h-30 w-30 object-contain mb-2" onerror="this.onerror=null;this.src='https://placehold.co/64x64/f3f4f6/6b7280?text=Logo'">
+            </div>
+
+            <div class="bg-white p-4 rounded-xl shadow-md flex flex-col items-center justify-center w-32 h-32 hover:shadow-lg transition duration-300">
+                <img src="images/client-grace-churches.jpg" alt="Grace Churches Worldwide Logo" class="h-30 w-30 object-contain mb-2" onerror="this.onerror=null;this.src='https://placehold.co/64x64/f3f4f6/6b7280?text=Logo'">
+            </div>
+
+            <div class="bg-white p-4 rounded-xl shadow-md flex flex-col items-center justify-center w-32 h-32 hover:shadow-lg transition duration-300">
+                <img src="images/client-masobe-books.png" alt="Masobe Books Logo" class="h-30 w-30 object-contain mb-2" onerror="this.onerror=null;this.src='https://placehold.co/64x64/f3f4f6/6b7280?text=Logo'">
+            </div>
+
+            <div class="bg-white p-4 rounded-xl shadow-md flex flex-col items-center justify-center w-32 h-32 hover:shadow-lg transition duration-300">
+                <img src="images/client-adcore-consulting.png" alt="Adcore Consulting Logo" class="h-30 w-30 object-contain mb-2" onerror="this.onerror=null;this.src='https://placehold.co/64x64/f3f4f6/6b7280?text=Logo'">
+            </div>
+
+            <div class="bg-white p-4 rounded-xl shadow-md flex flex-col items-center justify-center w-32 h-32 hover:shadow-lg transition duration-300">
+                <img src="images/client-plexity-digital.png" alt="Plexity Digital Services Logo" class="h-30 w-30 object-contain mb-2" onerror="this.onerror=null;this.src='https://placehold.co/64x64/f3f4f6/6b7280?text=Logo'">
+            </div>
+
+            <div class="bg-white p-4 rounded-xl shadow-md flex flex-col items-center justify-center w-32 h-32 hover:shadow-lg transition duration-300">
+                <img src="images/client-emphaloz-publishing.png" alt="Emphaloz Publishing Logo" class="h-30 w-30 object-contain mb-2" onerror="this.onerror=null;this.src='https://placehold.co/64x64/f3f4f6/6b7280?text=Logo'">
+            </div>
+
+        </div>
+    </div>
+</section>
+        
+        <section class="py-16 bg-prodigyRed">
+            <div class="container mx-auto px-6 text-center animate-on-scroll">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Optimize Your Supply Chain?</h2>
+                <p class="text-xl text-white mb-8">Let our team of experts handle the complexity, so you can focus on growth.</p>
+                <a href="contact.html" class="bg-white hover:bg-prodigyBlue hover:text-white text-prodigyRed px-10 py-4 rounded-full text-lg font-bold uppercase tracking-wider btn-hover-effect shadow-2xl">
+                    Request a Consultation
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+    
+    <script src="components/navigation.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Initialize feather icons for content outside the custom components
+        feather.replace();
+    </script>
+</body>
+</html>
