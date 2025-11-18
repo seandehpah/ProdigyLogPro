@@ -130,9 +130,23 @@ h4 {
 .contact-icon,
 .whatsapp-contact-icon {
     width: 18px;
+    height: 18px;
     margin-top: 2px;
     margin-right: 0.75rem;
-    fill: white !important; /* CHANGE TO WHITE */
+    flex-shrink: 0;
+    stroke: white;
+    fill: none;
+    stroke-width: 1.5;
+}
+
+.contact-info li:nth-child(1) .contact-icon {
+    fill: white;
+    stroke: none;
+}
+
+.whatsapp-contact-icon {
+    fill: white;
+    stroke: none;
 }
 
 /* Social Links */
@@ -228,7 +242,8 @@ h4 {
                 </li>
                 <li>
                     <svg class="contact-icon" viewBox="0 0 24 24">
-                        <path d="M4 4h16v16H4z" fill="none"/><path d="M22 6l-10 7L2 6" />
+                        <path d="M2 5c0-1.1.9-2 2-2h16c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V5z" fill="none" stroke="white" stroke-width="1.5"/>
+                        <path d="M4 5l8 6 8-6" stroke="white" stroke-width="1.5" fill="none"/>
                     </svg>
                     <a href="mailto:${this.EMAIL}">${this.EMAIL}</a>
                 </li>
