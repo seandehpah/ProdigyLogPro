@@ -9,8 +9,8 @@ class CustomFooter extends HTMLElement {
 
         this.WHATSAPP_NUMBER = "2348109881237";
         this.WHATSAPP_URL = `https://wa.me/${this.WHATSAPP_NUMBER}`;
-        this.FACEBOOK_URL = "https://facebook.com/theprodigylogistics";
-        this.INSTAGRAM_URL = "https://instagram.com/theprodigylogistics";
+        this.FACEBOOK_URL = "https://web.facebook.com/people/Theprodigylogistics/100069321536375/";
+        this.INSTAGRAM_URL = "https://instagram.com/the_prodigylogistics";
         this.LINKEDIN_URL = "https://www.linkedin.com/company/107902737";
 
         this.CURRENT_YEAR = new Date().getFullYear();
