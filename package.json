@@ -3,14 +3,12 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "echo 'Development mode'",
+    "build": "echo 'No build needed for static site'",
+    "start": "echo 'Ready to deploy'"
   },
   "dependencies": {
     "nodemailer": "^6.9.5",
-    "next": "14.2.3",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "cors": "^2.8.5"
   }
 }
