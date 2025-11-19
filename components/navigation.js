@@ -2,7 +2,7 @@ class CustomNavigation extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.LOGO_SRC = "images/prodigy.png";
+        this.LOGO_SRC = "/images/prodigy.png";
      }
     
     connectedCallback() {
