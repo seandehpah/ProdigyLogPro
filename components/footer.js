@@ -14,7 +14,7 @@ class CustomFooter extends HTMLElement {
         this.LINKEDIN_URL = "https://www.linkedin.com/company/107902737";
 
         this.CURRENT_YEAR = new Date().getFullYear();
-        this.LOGO_SRC = "images/prodigy.png";
+        this.LOGO_SRC = "/images/prodigy.png";
     }
 
     connectedCallback() {
