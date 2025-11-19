@@ -184,7 +184,7 @@ h4 {
 
         <!-- Logo + Summary -->
         <div class="footer-logo">
-             <a href="index.html"><img src="${this.LOGO_SRC}" class="logo-img" alt="Prodigy Logistics Logo" /></a>
+             <a href="/"><img src="${this.LOGO_SRC}" class="logo-img" alt="Prodigy Logistics Logo" /></a>
             <p class="footer-summary">
                 End-to-end logistics, supply chain, and procurement solutions for Nigerian businesses.
             </p>
@@ -213,10 +213,10 @@ h4 {
         <div>
             <h4>Quick Links</h4>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services Overview</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/services/">Services Overview</a></li>
+                <li><a href="/contact/">Contact Us</a></li>
             </ul>
         </div>
 
@@ -224,9 +224,9 @@ h4 {
         <div>
             <h4>Services</h4>
             <ul class="nav-links">
-                <li><a href="procurement.html">Procurement</a></li>
-                <li><a href="logistics.html">Logistics</a></li>
-                <li><a href="custom.html">Custom Solutions</a></li>
+                <li><a href="/procurement/">Procurement</a></li>
+                <li><a href="/logistics/">Logistics</a></li>
+                <li><a href="/custom/">Custom Solutions</a></li>
             </ul>
         </div>
 

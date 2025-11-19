@@ -9,14 +9,14 @@ class CustomNavigation extends HTMLElement {
         // Detect current page from URL pathname
         const path = window.location.pathname;
         
-        if (path.includes('logistics.html') || 
-            path.includes('procurement.html') || 
-            path.includes('custom.html') ||
-            path.includes('services.html')) {
+        if (path.includes('logistics') || 
+            path.includes('procurement') || 
+            path.includes('custom') ||
+            path.includes('services')) {
             this.currentPage = 'services';
-        } else if (path.includes('about.html')) {
+        } else if (path.includes('about')) {
             this.currentPage = 'about';
-        } else if (path.includes('contact.html')) {
+        } else if (path.includes('contact')) {
             this.currentPage = 'contact';
         } else {
             this.currentPage = 'home';
@@ -160,29 +160,31 @@ class CustomNavigation extends HTMLElement {
 
         <nav part="header">
             <div class="logo">
-                <a href="index.html"><img src="${this.LOGO_SRC}" alt="Logo"></a>
+                <a href="/">
+                    <img src="${this.LOGO_SRC}" alt="Logo">
+                </a>
             </div>
 
             <div class="menu">
                 <div class="menu-item ${this.currentPage === 'home' ? 'active' : ''}">
-                    <a href="index.html">Home</a>
+                    <a href="/">Home</a>
                 </div>
 
                 <div class="menu-item ${this.currentPage === 'services' ? 'active' : ''}">
-                    <a href="services.html">Services</a>
+                    <a href="/services/">Services</a>
                     <div class="dropdown">
-                        <a href="logistics.html">Logistics & Delivery</a>
-                        <a href="procurement.html">Procurement Solutions</a>
-                        <a href="custom.html">Custom Supply Chain Solutions</a>
+                        <a href="/logistics/">Logistics & Delivery</a>
+                        <a href="/procurement/">Procurement Solutions</a>
+                        <a href="/custom/">Custom Supply Chain Solutions</a>
                     </div>
                 </div>
 
                 <div class="menu-item ${this.currentPage === 'about' ? 'active' : ''}">
-                    <a href="about.html">About</a>
+                    <a href="/about/">About</a>
                 </div>
 
                 <div class="menu-item ${this.currentPage === 'contact' ? 'active' : ''}">
-                    <a href="contact.html">Contact</a>
+                    <a href="/contact/">Contact</a>
                 </div>
             </div>
 
