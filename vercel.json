@@ -6,21 +6,20 @@
       "src": "/api/(.*)",
       "dest": "/api/$1"
     },
+
     {
-      "src": "/index\\.html$",
-      "dest": "/"
+      "src": "^/$",
+      "dest": "/index.html"
     },
+
     {
-      "src": "/(.+)\\.html$",
-      "dest": "/$1/"
-    },
-    {
-      "src": "/(.*)/$",
+      "src": "/(.*)/",
       "dest": "/$1.html"
     },
+
     {
-      "src": "^/(.+)$",
-      "dest": "/$1.html"
+      "src": "/(.*)",
+      "dest": "/$1"
     }
   ]
 }
