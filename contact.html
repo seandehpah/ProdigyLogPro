@@ -115,30 +115,30 @@
                         Send Us an Inquiry
                     </h2>
 
-                    <form id="contact-form" action="submit_form.php" method="POST" class="space-y-6">
+                    <form id="contact-form" action="/api/sendmail" method="POST" class="space-y-6">
                         <div>
                             <label for="name" class="block text-gray-700 font-semibold mb-2">Full Name</label>
-                            <input type="text" id="name" name="Name" required
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 focus:ring-4 focus:ring-prodigyRed/30 focus:border-prodigyRed/70">
+                            <input type="text" id="name" name="name" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 focus:ring-4 focus:ring-prodigyRed/30 focus:border-prodigyRed/70 invalid:border-red-500">
                         </div>
 
                         <div>
                             <label for="email" class="block text-gray-700 font-semibold mb-2">Email Address</label>
-                            <input type="email" id="email" name="Email" required
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 focus:ring-4 focus:ring-prodigyRed/30 focus:border-prodigyRed/70">
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 focus:ring-4 focus:ring-prodigyRed/30 focus:border-prodigyRed/70 invalid:border-red-500">
                         </div>
 
                         <div>
                             <label for="phone" class="block text-gray-700 font-semibold mb-2">Phone Number</label>
-                            <input type="tel" id="phone" name="Phone"
+                            <input type="tel" id="phone" name="phone"
                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 focus:ring-4 focus:ring-prodigyRed/30 focus:border-prodigyRed/70">
                         </div>
 
                         <div>
                             <label for="service" class="block text-gray-700 font-semibold mb-2">Service Interested In</label>
-                            <select id="service" name="Service"
+                            <select id="service" name="service"
                                     class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 focus:ring-4 focus:ring-prodigyRed/30 focus:border-prodigyRed/70">
-                                <option value="General Inquiry">Select a service</option>
+                                <option value="">Select a service</option>
                                 <option value="Procurement Solutions">Procurement Solutions</option>
                                 <option value="Logistics & Delivery">Logistics & Delivery</option>
                                 <option value="Custom Supply Chain Solutions">Custom Supply Chain Solutions</option>
@@ -147,15 +147,18 @@
 
                         <div>
                             <label for="message" class="block text-gray-700 font-semibold mb-2">Your Message</label>
-                            <textarea id="message" name="Message" rows="5"
-                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 focus:ring-4 focus:ring-prodigyRed/30 focus:border-prodigyRed/70"></textarea>
+                            <textarea id="message" name="message" rows="5" required
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 focus:ring-4 focus:ring-prodigyRed/30 focus:border-prodigyRed/70 invalid:border-red-500"></textarea>
                         </div>
 
-                        <button type="submit"
-                                class="w-full bg-prodigyRed hover:bg-prodigyBlue text-white px-6 py-3 rounded-lg text-lg font-semibold transition duration-300 shadow-lg transform hover:scale-[1.01]">
+                        <button type="submit" id="submit-btn"
+                                class="w-full bg-prodigyRed hover:bg-prodigyBlue text-white px-6 py-3 rounded-lg text-lg font-semibold transition duration-300 shadow-lg transform hover:scale-[1.01] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100">
                             Submit Inquiry
                         </button>
                     </form>
+
+                    <!-- Feedback paragraph -->
+                    <p id="formFeedback" class="text-center mt-4 text-lg font-semibold"></p>
                 </div>
 
             </div>
@@ -222,6 +225,65 @@
     <script src="components/navigation.js"></script>
     <script src="components/footer.js"></script>
     <script src="script.js"></script>
-    <script>feather.replace();</script> 
+
+    <script>
+        feather.replace();
+
+        // Production-ready form submission with all 4 enhancements
+        document.getElementById('contact-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const form = e.target;
+            const submitBtn = document.getElementById('submit-btn');
+            const feedback = document.getElementById('formFeedback');
+            
+            // Enhancement 1: Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            
+            // Clear previous feedback
+            feedback.textContent = '';
+            feedback.className = '';
+            
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(Object.fromEntries(formData))
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    // Enhancement 2: Display success message with styling
+                    feedback.textContent = result.message;
+                    feedback.className = "text-center mt-4 text-lg text-green-600 font-semibold";
+                    form.reset();
+                    
+                    // Enhancement 3: Auto-clear success message after 5 seconds
+                    setTimeout(() => {
+                        feedback.textContent = '';
+                        feedback.className = '';
+                    }, 5000);
+                } else {
+                    // Enhancement 2: Display error message with styling
+                    feedback.textContent = result.error || "Something went wrong.";
+                    feedback.className = "text-center mt-4 text-lg text-red-600 font-semibold";
+                }
+            } catch (err) {
+                // Enhancement 2: Display network error with styling
+                feedback.textContent = "Error sending message. Please try again.";
+                feedback.className = "text-center mt-4 text-lg text-red-600 font-semibold";
+                console.error('Form submission error:', err);
+            } finally {
+                // Enhancement 1: Re-enable button after submission (whether success or error)
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Inquiry';
+            }
+        });
+    </script>
+
 </body>
 </html>

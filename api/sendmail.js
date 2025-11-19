@@ -6,7 +6,11 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, phone, message } = req.body;
+    const { name, email, phone, service, message } = req.body;
+    
+    if (!name || !email || !message) {
+      return res.status(400).json({ error: "Name, email, and message are required" });
+    }
 
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -14,7 +18,10 @@ export default async function handler(req, res) {
       secure: false,
       auth: {
         user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS
+        pass: process.env.SMTP_PASS,
+      },
+      tls: { 
+        rejectUnauthorized: true  // ✅ FIXED: Removed SSLv3
       }
     });
 
@@ -23,19 +30,28 @@ export default async function handler(req, res) {
       to: process.env.CONTACT_RECEIVER,
       subject: "New Website Contact Form Submission",
       html: `
+        <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Message:</strong><br>${message}</p>
+        <p><strong>Phone:</strong> ${phone || "N/A"}</p>
+        <p><strong>Service Interested In:</strong> ${service || "N/A"}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message.replace(/\n/g, "<br>")}</p>
       `
     };
 
     await transporter.sendMail(mailOptions);
 
-    return res.status(200).json({ success: true, message: "Message sent successfully!" });
+    return res.status(200).json({ 
+      success: true, 
+      message: "Message sent successfully!" 
+    });
 
   } catch (err) {
     console.error("MAIL ERROR:", err);
-    return res.status(500).json({ error: "Failed to send email", details: err.message });
+    return res.status(500).json({ 
+      error: "Failed to send email", 
+      details: err.message 
+    });
   }
 }
