@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q4VT7CTES0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q4VT7CTES0');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Page Not Found - Prodigy Logistics and Procurement Services Ltd</title>
+    <meta name="description" content="The page you're looking for does not exist. Return to Prodigy Logistics for professional logistics and procurement services in Nigeria.">
+
+    <link rel="icon" type="image/png" href="/images/logoicon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Page Not Found - Prodigy Logistics">
+    <meta property="og:description" content="The page you're looking for does not exist.">
+    <meta property="og:image" content="https://prodigyconsults.com.ng/images/prodigy-og.jpg">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        prodigyBlue: '#1E3A8A',
+                        prodigyRed: '#DC2626',
+                        prodigyOrange: '#F59E0B',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="font-sans text-gray-800 bg-gray-50">
+    
+    <!-- Navigation Component -->
+    <custom-navigation data-current-page="404"></custom-navigation>
+
+    <!-- MAIN SECTION -->
+    <main class="min-h-[70vh] flex items-center justify-center px-6 py-16">
+        <div class="text-center max-w-2xl">
+            
+            <div class="flex justify-center mb-6">
+                <div class="p-6 bg-prodigyBlue rounded-full shadow-lg">
+                    <i data-feather="alert-triangle" class="w-16 h-16 text-white"></i>
+                </div>
+            </div>
+
+            <h1 class="text-5xl md:text-6xl font-extrabold text-prodigyBlue mb-4">404</h1>
+            <p class="text-xl text-gray-600 mb-6">
+                Oops! The page you're looking for doesn't exist or may have been moved.
+            </p>
+
+            <a href="/" class="bg-prodigyRed hover:bg-prodigyOrange text-white px-10 py-4 rounded-full text-lg font-bold uppercase tracking-wider shadow-lg inline-block">
+                Go Back Home
+            </a>
+
+            <div class="mt-10">
+                <p class="text-gray-500 text-sm">
+                    If you believe this is an error, please contact our support team.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Component -->
+    <custom-footer></custom-footer>
+
+    <script src="/components/navigation.js"></script>
+    <script src="/components/footer.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
