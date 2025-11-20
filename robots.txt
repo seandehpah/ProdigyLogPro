@@ -1,0 +1,9 @@
+# Allow all search engines to crawl the entire site
+User-agent: *
+Allow: /
+
+# Block crawling of API endpoints (form submission)
+Disallow: /api/
+
+# Point to sitemap
+Sitemap: https://prodigyconsults.com.ng/sitemap.xml
